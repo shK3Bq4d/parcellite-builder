@@ -11,3 +11,8 @@ OUTDIR=output
 id=$(docker create $(./tag.sh))
 docker cp $id:/usr/local/bin/parcellite $OUTDIR/mrparcellite
 docker rm -v $id
+
+ls -al $OUTDIR/mrparcellite
+set +x
+echo "if you're happy"
+echo "pkill -9 mrparcellite; cp $OUTDIR/mrparcellite ~/bin"
