@@ -15,4 +15,4 @@ docker rm -v $id
 ls -al $OUTDIR/mrparcellite
 set +x
 echo "if you're happy"
-echo "pkill -9 mrparcellite; cp $OUTDIR/mrparcellite ~/bin"
+echo "pkill -9 mrparcellite; cp $OUTDIR/mrparcellite ~/bin; nohup mrparcellite &>/dev/null &"
