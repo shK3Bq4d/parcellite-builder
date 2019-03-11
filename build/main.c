@@ -245,7 +245,7 @@ gchar *process_new_item(GtkClipboard *clip,gchar *ntext, int *mod)
 			g_fprintf(stderr, "====remove_trailing_empy_lines====:\n_%s_\n==========\n",s);
 			g_regex_unref(regex);
 
-			regex = g_regex_new("\\s+$", G_REGEX_MULTILINE, 0, NULL);
+			regex = g_regex_new("[ \\t]+$", G_REGEX_MULTILINE, 0, NULL);
 			s = g_regex_replace_literal(regex, s, validate_utf8_text(s, strlen(s)), 0, "", 0, NULL);
 			g_fprintf(stderr, "====remove_trailing_spaces end of line====:\n_%s_\n==========\n",s);
 			g_regex_unref(regex);
